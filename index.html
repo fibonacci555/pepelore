@@ -1167,22 +1167,44 @@
 
 
 <script>
-    // Script de Navegação para Dispositivos Móveis
-    if (window.innerWidth < 430) {
-        // Função para lidar com o clique nos links de navegação
+
+
+    if (innerWidth < 430) {
+        // Get all the anchor elements inside the navigation
+        const navLinks = document.querySelectorAll('.nav .list a');
+
         function handleLinkClick(event, linkId) {
             const navItems = document.querySelectorAll('.nav .list');
-            navItems.forEach(item => item.classList.remove('active'));
-
-            const listItem = document.querySelector(`.${linkId}-nav.list`);
-            if (listItem) {
-                listItem.classList.add('active');
+            for (let i = 0; i < navItems.length; i++) {
+                const item = navItems[i];
+                item.classList.remove('active');
             }
 
-            scrollToSection(`#${linkId}`);
+            const listItem = document.querySelector(.${linkId}-nav.list);
+            listItem.classList.add('active');
         }
 
-        // Função para rolar para uma seção específica
+        document.querySelector('.home-link').addEventListener('click', function (event) {
+            handleLinkClick(event, 'home');
+            scrollToSection('#home');
+        });
+
+        document.querySelector('.features-link').addEventListener('click', function (event) {
+            handleLinkClick(event, 'features');
+            scrollToSection('#features');
+        });
+
+        document.querySelector('.tokenomics-link').addEventListener('click', function (event) {
+            handleLinkClick(event, 'tokenomics');
+            scrollToSection('#tokenomics');
+        });
+
+        document.querySelector('.roadmap-link').addEventListener('click', function (event) {
+            handleLinkClick(event, 'roadmap');
+            scrollToSection('#roadmap');
+        });
+
+        // Function to scroll to a specific section
         function scrollToSection(sectionId) {
             const targetElement = document.querySelector(sectionId);
             if (targetElement) {
@@ -1196,73 +1218,77 @@
             }
         }
 
-        // Eventos de Clique nos Links de Navegação
-        document.querySelectorAll('.nav .list a').forEach(link => {
-            link.addEventListener('click', function (event) {
-                const linkId = this.classList.contains('home-link') ? 'home' :
-                               this.classList.contains('features-link') ? 'features' :
-                               this.classList.contains('tokenomics-link') ? 'tokenomics' :
-                               this.classList.contains('roadmap-link') ? 'roadmap' : '';
-                handleLinkClick(event, linkId);
-            });
-        });
-
-        // Atualizar Classe Ativa ao Rolagem
+        // Function to update the active class based on section visibility
         function updateActiveClass() {
-            const sections = ['home', 'features', 'tokenomics', 'roadmap'];
-            let current = 'home';
-
-            sections.forEach(section => {
-                const element = document.querySelector(`#${section}`);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-                        current = section;
-                    }
-                }
-            });
-
-            document.querySelectorAll('.nav .list').forEach(item => {
+            const navItems = document.querySelectorAll('.nav .list');
+            navItems.forEach(item => {
                 item.classList.remove('active');
             });
 
-            const activeItem = document.querySelector(`.${current}-nav.list`);
-            if (activeItem) {
-                activeItem.classList.add('active');
+            const homeSection = document.querySelector('.home.hidden.show');
+            const homeNavItem = document.querySelector('.home-nav.list');
+            const featuresSection = document.querySelector('.features.hidden.show');
+            const featuresNavItem = document.querySelector('.features-nav.list');
+            const tokenomicsSection = document.querySelector('.tokenomics.hidden.show');
+            const tokenomicsNavItem = document.querySelector('.tokenomics-nav.list');
+            const roadmapSection = document.querySelector('.roadmap.hidden.show');
+            const roadmapNavItem = document.querySelector('.roadmap-nav.list');
+
+            if (homeSection) {
+                homeNavItem.classList.add('active');
+            } else if (featuresSection) {
+                featuresNavItem.classList.add('active');
+            } else if (tokenomicsSection) {
+                tokenomicsNavItem.classList.add('active');
+            } else if (roadmapSection) {
+                roadmapNavItem.classList.add('active');
             }
         }
 
-        window.addEventListener('scroll', debounce(updateActiveClass, 100));
-        window.addEventListener('resize', updateActiveClass);
-
-        // Função Debounce para Melhor Performance
-        function debounce(func, wait) {
-            let timeout;
-            return function (...args) {
-                clearTimeout(timeout);
-                timeout = setTimeout(() => func.apply(this, args), wait);
-            };
-        }
-
-        // Definir 'home' como ativo por padrão
+        // Set the home list item as active by default on page load
         document.querySelector('.home-nav.list').classList.add('active');
 
-        // Manipulação do Botão "Enter" na Splash Screen
-        document.getElementById('enter-btn-phone').addEventListener('click', function () {
-            const splash = document.querySelector('.splash');
-            if (splash) {
-                splash.classList.add('display-none');
-            }
+        // Update the active class when scrolling stops
+        let isScrolling;
+        window.addEventListener('scroll', function () {
+            clearTimeout(isScrolling);
+            isScrolling = setTimeout(function () {
+                updateActiveClass();
+            }, 1);
         });
+
+        // Event listener for resize events
+        window.addEventListener('resize', updateActiveClass);
+
+
+
+        function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+
+
+        document.getElementById('enter-btn-phone').addEventListener('click', function () {
+            var element = document.getElementById('enter-btn-phone');
+            splash.classList.add('display-none');
+            console.log("True");
+        });
+
+
+
     } else {
-        // Script para Desktop
+
+
         window.addEventListener("scroll", function () {
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
         });
+
     }
 
-    // Observador de Interseção para Elementos Ocultos
+
+
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -1276,39 +1302,35 @@
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
 
-    // Seleção de Botões de Som e Elementos de Áudio
-    const playButtons = document.querySelectorAll('.play-button');
-    const audios = document.querySelectorAll('.my-audio');
+    const splash = document.querySelector(".splash");
 
-    playButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            const audio = audios[index];
 
-            if (audio.paused) {
-                audio.play();
-                // Altera o ícone para "Pausar"
-                button.innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
-                        <style>
-                            svg { fill: #ffffff; }
-                        </style>
-                        <path d="...caminho do ícone de pausa..."/>
-                    </svg>
-                `;
-            } else {
-                audio.pause();
-                // Altera o ícone para "Reproduzir"
-                button.innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
-                        <style>
-                            svg { fill: #ffffff; }
-                        </style>
-                        <path d="...caminho do ícone de reproduzir..."/>
-                    </svg>
-                `;
-            }
-        });
+
+
+    // Get the play button element
+    const playButton = document.getElementById('play');
+
+    // Get the audio element
+    const audio = document.getElementById('myAudio');
+
+    // Add a click event listener to the play button
+    playButton.addEventListener('click', () => {
+        if (audio.paused) {
+            // Play the audio
+            audio.play();
+            playButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M533.6 32.5C598.5 85.3 640 165.8 640 256s-41.5 170.8-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"/></svg>';
+
+        } else {
+            // Pause the audio
+            audio.pause();
+            playButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>';
+
+        }
     });
-</script>
 
+
+
+
+
+</script>
 </html>
