@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css">
+
+    <!-- CSS Load -->
+    <link rel="stylesheet" href="css/phone.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="images/pepeweb.png">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>$LORE</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Usage');
+            data.addColumn('number', 'Trillions');
+            data.addRows([
+                ['Liquidity Pool', { v: 4250, f: '4,250 T' }],
+                ['CEX Listing', { v: 450, f: '450 T' }],
+                ['Marketing', { v: 150, f: '150 T' }],
+                ['Team', { v: 150, f: '150 T' }],
+            ]);
+
+
+            var options = {
+
+                is3D: true,
+                backgroundColor: "transparent",
+                legend: { position: 'top', textStyle: { color: 'blue', fontSize: 16 } },
+                fontSize: 15,
+                legend: { position: 'none' },
+                chartArea: { width: '100%' },
+                colors: ['rgb(10, 94, 33)', 'rgb(7, 148, 45)', 'rgb(9, 237, 72)', 'rgb(90, 255, 111)'],
+                pieSliceText: 'percentage',
+                pieSliceTextStyle: { fontSize: 10 },
+                tooltip: { textStyle: { fontSize: 15 }, suffix: ' T', showPercentage: true },
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
+    <div class="body-pc">
+
+        <style>
+            /* Style for smooth scrolling */
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+
+        <header>
+            <a href="" class="logo">PEPE$LORE</a>
+            <ul>
+                <li><a href="#initial-pc">Home</a></li>
+                <li><a href="#features-pc">Features</a></li>
+                <li><a href="#tokenomics-pc">Tokenomics</a></li>
+                <li><a href="#roadmap-pc">Roadmap</a></li>
+                <a href="https://www.pump.fun/3dXJ85P2aGGjfUbGjuZAbkyQsbB7GDsT6vd7MccGZEiM"><button
+                        class="buy-btn hidden" style="width: 150%;height: 50%;">BUY $LORE</button></a>
+                <button class="button-sound" id="play"
+                    style="margin-left: 15%;background-color: transparent;border: none; cursor: pointer;">
+                    <svg style="cursor:pointer" xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                            svg {
+                                fill: #ffffff
+                            }
+                        </style>
+                        <path
+                            d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z" />
+                    </svg> </button>
+                <audio id="myAudio" controls style="position: fixed; bottom: 0; left: 0; display: none;" autoplay>
+                    <source src="sound/pepe.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </ul>
+            <section class="banner"></section>
+        </header>
+
+        <script>
+            // Smooth scrolling behavior for anchor links using jQuery
+            $(document).ready(function () {
+                $('a[href^="#"]').on('click', function (e) {
+                    e.preventDefault();
+                    var target = this.hash;
+                    var $target = $(target);
+
+                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top
+                    }, 900, 'swing', function () {
+                        window.location.hash = target;
+                    });
+                });
+            });
+        </script>
+
+
+
+        <section id="initial-pc">
+            <div class="initial-pc">
+                <img src="images/pepe3.png" alt="" class="initial-image-pc">
+                <div class="inital-text-pc">
+                    <h1 class="hidden" style="text-shadow: 5px 5px 5px black;">THE UNIQUE STORY<br>OF A UNIQUE MEME<br>
+                        <h2 class="hidden" style="text-decoration: underline;">LAUNCHING ON MOVEPUMP SOON</h2>
+                        <h1 class="hidden" style="text-shadow: 5px 5px 5px black;">PEPE</h1>
+                        <h1 style="color: rgb(77,150,64); margin-top: -10%; font-size: 3.5rem; text-shadow: 5px 5px 5px black;"
+                            class="hidden">$LORE</h1>
+
+                        <div class="socials hidden">
+                            <ul>
+                                
+                                <li>
+                                    <a href="https://twitter.com/pepeloremad"><i class="fa-brands fa-twitter"
+                                            style="color: #ffffff;"></i></a>
+                                </li>
+                                
+                                
+                                <li>
+                                    <a href="https://t.me/pepeloremad"><i class="fa-brands fa-telegram"
+                                            style="color: #ffffff;"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fa-solid fa-chart-line" style="color: #ffffff;"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fa-regular fa-file-lines" style="color: #ffffff;"></i></a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+                        <a href="https://www.pump.fun/3dXJ85P2aGGjfUbGjuZAbkyQsbB7GDsT6vd7MccGZEiM"
+                            style="padding:2%;"><button class="buy-btn hidden" style="margin-top: -3%;">BUY
+                                $LORE</button></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="lore-carousel-section">
+            <div class="slider-carousel-container" >
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+                <!-- Clonado para efeito de rolagem infinita -->
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <div class="features hidden" id="features-pc" style="margin: 16px;">
+            <div class="title-section hidden">
+                <p><span class="fancy">FEATURES</span></p>
+            </div>
+            <div class="feature1">
+                <div class="text-feature1">
+                    <h2 class="hidden">Pepe's Thriving Legacy</h2>
+                    <h3 class="hidden" style="color: white;"><span style="color: rgb(77,150,64);">$LORE</span> is not
+                        your average meme coin. We're here to make a real impact. Pepe's legacy thrives in the depths of
+                        the web and the heights of crypto, spreading hope and joy. His <span
+                            style="color: rgb(77,150,64);">$LORE</span> spans a decade, uniting communities and serving
+                        as a symbol of resistance and humor.</h3>
+
+                </div>
+
+                <video class="ftr-vid hidden" src="images/pepe1.mp4" muted autoplay loop playsinline></video>
+            </div>
+            <div class="feature2">
+                <div class="text-feature2">
+                    <h2 class="hidden">Community Driven</h2>
+                    <h3 class="hidden" style="color: white;">In our quest for success, we believe in the power of unity,
+                        where everyone rowing in the same direction leads to collective triumph. <span
+                            style="color: rgb(77,150,64);">$LORE</span> transcends individual gains; it fosters a sense
+                        of community, where every member embraces the shared vision. Together, we forge ahead, driven by
+                        our unwavering dedication to Pepe's legendary <span style="color: rgb(77,150,64);">$LORE</span>,
+                        ensuring that we all emerge victorious.</h3>
+
+                </div>
+                <video class="ftr-vid hidden" src="images/pepe2.mp4" muted autoplay loop playsinline></video>
+            </div>
+            <div class="feature1">
+                <div class="text-feature1">
+                    <h2 class="hidden">Unparalleled Journey</h2>
+                    <h3 class="hidden" style="color: white;">The resurgence of the Meme kingdom is here to stay! <span
+                            style="color: rgb(77,150,64);">$LORE</span> seamlessly blends the influence of meme culture
+                        with an exciting and unpredictable roadmap, an unwavering community, and cutting-edge blockchain
+                        technology, all within a fully decentralized framework. This unique fusion positions <span
+                            style="color: rgb(77,150,64);">$LORE</span> as an unparalleled project that stands apart
+                        from the rest.</h3>
+
+                </div>
+                <video class="ftr-vid hidden" src="images/pepe3.mp4" muted autoplay loop playsinline></video>
+            </div>
+
+        </div>
+
+        <style>
+            .slider-main-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                overflow: hidden;
+            }
+
+            .slider-carousel-container {
+                
+                display: flex;
+                overflow: hidden;
+                width: 100%;
+                max-width: 100%;
+                margin: auto;
+                padding: 0;
+                mask-image: linear-gradient(to right, transparent 0, black 40px, black calc(100% - 40px), transparent 100%);
+                position: relative;
+            }
+
+
+            .slider-text-list {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: slider-infinite-scroll 25s linear infinite;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .slider-text-list li {
+                margin: 0 2rem;
+                font-weight: 500;
+                font-size: 1.25rem;
+                white-space: nowrap;
+            }
+
+            .lore-text{
+                color: white;
+            }
+
+            .highlighted-text{
+                color:#4c9540;
+            }
+
+            @keyframes slider-infinite-scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+        </style>
+
+
+
+        
+        
+
+
+
+        <section class="lore-carousel-section">
+            <div class="slider-carousel-container" >
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+                <!-- Clonado para efeito de rolagem infinita -->
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="tokenomics hidden" id="tokenomics-pc" style="margin: 16px;">
+            <div class="title-section hidden" style="margin-bottom: -5%;">
+                <p><span class="fancy">TOKENOMICS</span></p>
+            </div>
+            <div class="tokenomics-container">
+                <div class="tokenomics-container-text">
+                    <h5 style="align-self: center; justify-content: left; display: flex; color: rgb(90, 255, 111);text-shadow: 0px 1px rgb(0, 0, 0);"
+                        class="hidden">
+                        NO TAXES, NO BS. <br>JUST $LORE. IT'S THAT SIMPLE... </h5>
+                    <h5 class="hidden" style="color: #ffffff;">We mean business! A whopping 100% of the tokens
+                        have been swiftly injected into the liquidity pool, leaving no room for games. </h5>
+                    <h5 class="hidden" style="color: #ffffff;">LP tokens? Consider them vanished, reduced to
+                        mere ashes. And brace yourself for the exciting part - we've renounced the contract, leaving no
+                        strings
+                        attached.</h5>
+
+                </div>
+
+                <video class="ftr-vid hidden" src="images/lambo.mp4" muted autoplay loop playsinline></video>
+            </div>
+
+
+            <div class="tokenomics-container2">
+                <div class="tokenomics-container-text2">
+                    <a href="https://www.pump.fun/3dXJ85P2aGGjfUbGjuZAbkyQsbB7GDsT6vd7MccGZEiM"
+                        style="padding:2%;"><button class="buy-btn hidden" style="margin-top: 15%; width: 200%;">BUY
+                            $LORE</button></a>
+                    <!--<h5 class="hidden"
+                style="align-self: center; justify-content: center; display: flex; color: rgb(90, 255, 111);  text-shadow: 0px 1px rgb(0, 0, 0);">
+                Transparency is our motto! Feel free to track the activities of these wallets, ensuring our
+                accountability:</h5>
+                    <h5 class="hidden"
+                        style="align-self: center; justify-content: center; display: flex; color: rgb(90, 255, 111); text-shadow: 0px 1px rgb(0, 0, 0);">
+                        CEX Listing</h5>
+                    <h5 class="hidden"
+                        style="margin-top:-3%;align-self: center; justify-content: center; display: flex; color: rgb(255, 255, 255);text-shadow: 0px 1px rgb(0, 0, 0);">
+                        0x0000000000000000000<br>000000000000000000000</h5>
+                    <h5 class="hidden"
+                        style="margin-bottom:4%;align-self: center; justify-content: center; display: flex; color: rgb(90, 255, 111); text-shadow: 0px 1px rgb(0, 0, 0);">
+                        Team</h5>
+                    <h5 class="hidden"
+                        style="margin-top:-3%;align-self: center; justify-content: center; display: flex; color: rgb(255, 255, 255);  text-shadow: 0px 1px rgb(0, 0, 0);">
+                        0x0000000000000000000<br>000000000000000000000</h5>
+                    <h5 class="hidden"
+                        style="margin-bottom:4%;align-self: center; justify-content: center; display: flex; color: rgb(90, 255, 111); text-shadow: 0px 1px rgb(0, 0, 0);">
+                        Marketing</h5>
+                    <h5 class="hidden"
+                        style="margin-top:-3%;align-self: center; justify-content: center; display: flex; color: rgb(255, 255, 255);  text-shadow: 0px 1px rgb(0, 0, 0);">
+                        0x0000000000000000000<br>000000000000000000000</h5>
+
+
+                    <h5 class="hidden" style="color: #ffffff;">Witness history with us as we surpass every meme
+                        coin in existance. It's a spectacle you wouldn't want to miss!</h5>
+                    <h5 class="hidden" style="color: #ffffff;margin-top:-3%;">So grab your <span
+                            style="color: rgb(77,150,64);text-shadow: 0px 1px rgb(0, 0, 0);">$LORE</span> and join the squad.
+                        Together, we shall triumph in the realm of crypto, one meme at a time!</h5>
+                    <div id="piechart_3d" class="hidden"
+                        style="width: 100%; height: 700px; background-color: transparent; z-index: 0; position: relative; margin-top: -10%; align-self: center; justify-content: center; margin-right: 0; margin-left: 0;"
+                        fill="transparent"></div>-->
+
+                </div>
+            </div>
+        </div>
+
+        <section class="lore-carousel-section">
+            <div class="slider-carousel-container" >
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+                <!-- Clonado para efeito de rolagem infinita -->
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <div class="roadmap hidden" id="roadmap-pc" style="margin: 16px;">
+            <div class="title-section">
+                <p><span class="fancy" class="hidden">ROADMAP</span></p>
+            </div>
+
+            <div class="container">
+                <div class="card hidden">
+                    <div class="face face1">
+                        <div class="content">
+                            <img style="margin-top: -30%; scale: 1;"
+                                src="https://c10.patreonusercontent.com/4/patreon-media/p/reward/2212442/59aeadb0c6164a5e810bfbb0ea588988/eyJ3Ijo0MDB9/2.png?token-time=2145916800&token-hash=dKM2iKWnusqZ_yb-ZsHhxcQSaUR30JXMXz72oMESxo4%3D">
+                            <h3>Phase I</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>The Tale Begins</h3>
+                            <p> • Fair Launch on Move Pump<br>
+                                • Reaching 1,000 Holders Milestone<br>
+                                • Listings on DexTools & Other Platforms<br>
+                                • <span style="color: rgb(77,150,64);">$LORE</span> Treasure Gathering<br>
+                                • Thorough Smart Contract Audit</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="face face1">
+                        <div class="content">
+                            <img style="margin-top: -30%; scale: 1;"
+                                src="https://c10.patreonusercontent.com/4/patreon-media/p/reward/2429307/d8e0fdf82c6d4dde96d63fcf843f78dc/eyJ3Ijo0MDB9/2.png?token-time=2145916800&token-hash=RewHrZLz3gnw9L_PeJjXjIydsBpRS7wtqeEFQ_KmiUM%3D">
+                            <h3>PHASE II</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>Strapping In!</h3>
+                            <p> • <span style="color: rgb(77,150,64);">$LORE</span> Treasure Dashboard Unveiled<br>
+                                • Alliances with Community Partnerships<br>
+                                • Community Enriching the Experience<br>
+                                • Exciting CEX Listings Announcements<br>
+                                • Celebrating 10,000 Holders Milestone</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card hidden">
+                    <div class="face face1">
+                        <div class="content">
+                            <img style="margin-top: -30%; scale: 1;"
+                                src="https://c10.patreonusercontent.com/4/patreon-media/p/reward/2693495/94a1ee5289bd41909513fff671b1c215/eyJ3Ijo0MDB9/2.png?token-time=2145916800&token-hash=WmKgNe7uNT7GxBrBUVZA9BVJMeb5R_wnd5R6WTHgH8I%3D">
+                            <h3>PHASE III</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>The Memes Ascend</h3>
+                            <p> • Secure Big CEX Listings<br>
+                                • Unleash an AI Trading Bot<br>
+                                • Reaching 100,000 Holders<br>
+                                • Captivating <span style="color: rgb(77,150,64);">$LORE</span> Merchandise<br>
+                                • Introducing NFT Collections & Staking<br>
+                                • Roadmap V2: Path to Success</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="lore-carousel-section">
+            <div class="slider-carousel-container" >
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+                <!-- Clonado para efeito de rolagem infinita -->
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+                <ul class="slider-text-list" aria-hidden="true">
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                    <li><span class="lore-text">PEPE<span class="highlighted-text">$LORE</span></span></li>
+                </ul>
+            </div>
+        </section>
+
+
+
+        <footer class="hidden" style="margin-top:10%;">
+            <h1 style="display: flex;" class="hidden">PEPE <span style="color: rgb(77,150,64);">$LORE</span></h1>
+            <div class="socials" class="hidden">
+                <ul>
+                    
+                    <li>
+                        <a href="https://twitter.com/pepeloremad"><i class="fa-brands fa-twitter"
+                                style="color: #ffffff;"></i></a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://t.me/pepeloremad"><i class="fa-brands fa-telegram"
+                                style="color: #ffffff;"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-chart-line" style="color: #ffffff;"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-regular fa-file-lines" style="color: #ffffff;"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <!-- TELEMOVELLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL-->
+    <div class="body-phone">
+        <div class="splash" style="display: flex; justify-content: center; align-items: center;">
+
+            <h1 class="fade-in" style="font-size:xxx-large;">PEPE <span style="color: rgb(77,150,64);">$LORE</span> <br>
+            </h1>
+            <button class="enter-btn fade-in" id="enter-btn-phone"><span>
+                    Click Me
+                </span></button>
+
+
+
+        </div>
+        <video id="background-video" autoplay loop muted playsinline>
+            <source src="css/bg.mp4" type="video/mp4">
+        </video>
+
+
+        <button class="button-sound" id="play"
+            style="position: fixed; bottom: 0; right: 0; z-index: 4; margin: 25% 16px;">
+            <svg style="cursor:pointer" xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <style>
+                    svg {
+                        fill: #ffffff
+                    }
+                </style>
+                <path
+                    d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z" />
+            </svg> </button>
+        <audio id="myAudio" controls style="position: fixed; bottom: 0; left: 0; display: none;" autoplay>
+            <source src="sound/pepe.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="nav" style="height: 0; z-index: 100; margin: 2%; position: static;">
+            <div class="navigation">
+                <ul>
+                    <li class="home-nav list active">
+                        <a class="home-link" href="#home" onclick="handleLinkClick(event, 'home');">
+                            <span class="icon"><i class="fa-solid fa-house"></i></span>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+                    <li class="features-nav list">
+                        <a class="features-link" href="#features" onclick="handleLinkClick(event, 'features');">
+                            <span class="icon"><i class="fa-solid fa-list"></i></span>
+                            <span class="text">Features</span>
+                        </a>
+                    </li>
+                    <li class="tokenomics-nav list">
+                        <a class="tokenomics-link" href="#tokenomics" onclick="handleLinkClick(event, 'tokenomics');">
+                            <span class="icon"><i class="fa-solid fa-chart-pie"></i></span>
+                            <span class="text">Tokenomics</span>
+                        </a>
+                    </li>
+                    <li class="roadmap-nav list">
+                        <a class="roadmap-link" href="#roadmap" onclick="handleLinkClick(event, 'roadmap');">
+                            <span class="icon"><i class="fa-solid fa-signs-post"></i></span>
+                            <span class="text">Roadmap</span>
+                        </a>
+                    </li>
+                    <div class="indicator"></div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nav-pc">
+            <ul>
+                <li>
+                    <h2>PEPE $LORE</h2>
+                </li>
+                <li><a href="#home">
+                        <h3>HOME</h3>
+                    </a></li>
+                <li><a href="#features">
+                        <h3>FEATURES</h3>
+                    </a></li>
+                <li><a href="#tokenomics">
+                        <h3>TOKENOMICS</h3>
+                    </a></li>
+                <li><a href="#roadmap">
+                        <h3>ROADMAP</h3>
+                    </a></li>
+
+            </ul>
+        </div>
+
+
+
+
+
+
+
+        <div class="home hidden" id="home" style="margin: 16px;">
+            <div class="initial-image">
+                <img src="images/pepe3.png" alt="">
+
+            </div>
+            <h1 class="hidden">THE UNIQUE STORY<br>OF A UNIQUE MEME<br>
+                <h1 class="hidden">PEPE</h1>
+                <h1 style="color: rgb(77,150,64); margin-top: -10%; font-size: 3.5rem;" class="hidden">$LORE</h1>
+
+                <div class="socials hidden">
+                    <ul>
+                        
+                        <li>
+                            <a href="https://twitter.com/pepeloremad"><i class="fa-brands fa-twitter"
+                                    style="color: #ffffff;"></i></a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="https://t.me/pepeloremad"><i class="fa-brands fa-telegram"
+                                    style="color: #ffffff;"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-solid fa-chart-line" style="color: #ffffff;"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-regular fa-file-lines" style="color: #ffffff;"></i></a>
+                        </li>
+
+                    </ul>
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <a href="https://www.pump.fun/3dXJ85P2aGGjfUbGjuZAbkyQsbB7GDsT6vd7MccGZEiM"
+                            style="padding:2%;justify-content: center;align-items: center;width: 100%;"><button
+                                class="buy-btn hidden" style="width: 100%;">BUY $LORE</button></a>
+                    </div>
+                </div>
+
+
+
+        </div>
+
+        <div class="slider hidden" style="z-index: -1; box-shadow: none;  opacity: 1;">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="features hidden" id="features" style="margin: 16px;">
+            <div class="title-section hidden">
+                <p><span class="fancy">FEATURES</span></p>
+            </div>
+            <h2 class="hidden" style="font-size: 26px;">Pepe's Thriving Legacy</h2>
+            <h3 class="hidden" style="color: white;"><span style="color: rgb(77,150,64);">$LORE</span> is not your
+                average meme coin. We're here to make a real impact. Pepe's legacy thrives in the depths of the web and
+                the heights of crypto, spreading hope and joy. His <span style="color: rgb(77,150,64);">$LORE</span>
+                spans a decade, uniting communities and serving as a symbol of resistance and humor.</h3>
+            <video class="ftr-vid hidden" src="images/pepe1.mp4" muted autoplay loop playsinline></video>
+            <h2 class="hidden" style="font-size: 26px;">Community Driven</h2>
+            <h3 class="hidden" style="color: white;">In our quest for success, we believe in the power of unity, where
+                everyone rowing in the same direction leads to collective triumph. <span
+                    style="color: rgb(77,150,64);">$LORE</span> transcends individual gains; it fosters a sense of
+                community, where every member embraces the shared vision. Together, we forge ahead, driven by our
+                unwavering dedication to Pepe's legendary <span style="color: rgb(77,150,64);">$LORE</span>, ensuring
+                that we all emerge victorious.</h3>
+            <video class="ftr-vid hidden" src="images/pepe2.mp4" muted autoplay loop playsinline></video>
+            <h2 class="hidden" style="font-size: 26px;">Unparalleled Journey</h2>
+            <h3 class="hidden" style="color: white;">The resurgence of the Meme kingdom is here to stay! <span
+                    style="color: rgb(77,150,64);">$LORE</span> seamlessly blends the influence of meme culture with an
+                exciting and unpredictable roadmap, an unwavering community, and cutting-edge blockchain technology, all
+                within a fully decentralized framework. This unique fusion positions <span
+                    style="color: rgb(77,150,64);">$LORE</span> as an unparalleled project that stands apart from the
+                rest.</h3>
+            <video class="ftr-vid hidden" src="images/pepe3.mp4" muted autoplay loop playsinline></video>
+
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <a href="https://www.pump.fun/3dXJ85P2aGGjfUbGjuZAbkyQsbB7GDsT6vd7MccGZEiM"
+                    style="padding:2%;justify-content: center;align-items: center;width: 100%;"><button
+                        class="buy-btn hidden" style="width: 100%;">BUY $LORE</button></a>
+            </div>
+
+        </div>
+
+        <div class="slider hidden" style="z-index: -1; box-shadow: none; opacity: 1;">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <div class="tokenomics hidden" id="tokenomics" style="margin: 16px;">
+            <div class="title-section hidden" style="margin-bottom: -5%;">
+                <p><span class="fancy">TOKENOMICS</span></p>
+            </div>
+            <h5 style="align-self: center; justify-content: left; display: flex; color: rgb(90, 255, 111); font-size: 20px;text-shadow: 0px 1px rgb(0, 0, 0);"
+                class="hidden">
+                NO TAXES, NO BS. <br>JUST $LORE. IT'S THAT SIMPLE... </h5>
+            <h5 class="hidden" style="font-size: 14px;color: #ffffff;">We mean business! A whopping 100% of the tokens
+                have been swiftly injected into the liquidity pool, leaving no room for games. </h5>
+            <h5 class="hidden" style="font-size: 14px;color: #ffffff;">LP tokens? Consider them vanished, reduced to
+                mere ashes. And brace yourself for the exciting part - we've renounced the contract, leaving no strings
+                attached.</h5>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <a href="https://www.pump.fun/3dXJ85P2aGGjfUbGjuZAbkyQsbB7GDsT6vd7MccGZEiM"
+                    style="padding:2%;justify-content: center;align-items: center;width: 100%;"><button
+                        class="buy-btn hidden" style="width: 100%;">BUY $LORE</button></a>
+            </div>
+        </div>
+
+        <div class="slider hidden" style="z-index: -1; box-shadow: none;  opacity: 1; ">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <div class="roadmap hidden" id="roadmap" style="margin: 16px;">
+            <div class="title-section">
+                <p><span class="fancy" class="hidden">ROADMAP</span></p>
+            </div>
+
+            <div class="container" style="margin-top: 25%; border-radius: 5%;">
+                <div class="card hidden">
+                    <div class="face face1">
+                        <div class="content">
+                            <img style="margin-top: -30%; scale: 2;"
+                                src="https://c10.patreonusercontent.com/4/patreon-media/p/reward/2212442/59aeadb0c6164a5e810bfbb0ea588988/eyJ3Ijo0MDB9/2.png?token-time=2145916800&token-hash=dKM2iKWnusqZ_yb-ZsHhxcQSaUR30JXMXz72oMESxo4%3D">
+                            <h3>Phase I</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content" style="font-size: 12px;">
+                            <h3>The Tale Begins</h3>
+                            <p> • Fair Launch on Move Pump<br>
+                                • Reaching 1,000 Holders Milestone<br>
+                                • Listings on DexTools & Other Platforms<br>
+                                • <span style="color: rgb(77,150,64);">$LORE</span> Treasure Gathering<br>
+                                • Thorough Smart Contract Audit</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="face face1">
+                        <div class="content">
+                            <img style="margin-top: -30%; scale: 2;"
+                                src="https://c10.patreonusercontent.com/4/patreon-media/p/reward/2429307/d8e0fdf82c6d4dde96d63fcf843f78dc/eyJ3Ijo0MDB9/2.png?token-time=2145916800&token-hash=RewHrZLz3gnw9L_PeJjXjIydsBpRS7wtqeEFQ_KmiUM%3D">
+                            <h3>PHASE II</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content" style="font-size: 12px;">
+                            <h3>Strapping In!</h3>
+                            <p> • <span style="color: rgb(77,150,64);">$LORE</span> Treasure Dashboard Unveiled<br>
+                                • Alliances with Community Partnerships<br>
+                                • Community Enriching the Experience<br>
+                                • Exciting CEX Listings Announcements<br>
+                                • Celebrating 10,000 Holders Milestone</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="face face1">
+                        <div class="content">
+                            <img style="margin-top: -30%; scale: 2;"
+                                src="https://c10.patreonusercontent.com/4/patreon-media/p/reward/2693495/94a1ee5289bd41909513fff671b1c215/eyJ3Ijo0MDB9/2.png?token-time=2145916800&token-hash=WmKgNe7uNT7GxBrBUVZA9BVJMeb5R_wnd5R6WTHgH8I%3D">
+                            <h3>PHASE III</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content" style="font-size: 12px;">
+                            <h3>The Memes Ascend</h3>
+                            <p> • Secure Big CEX Listings<br>
+                                • Unleash an AI Trading Bot<br>
+                                • Reaching 100,000 Holders<br>
+                                • Captivating <span style="color: rgb(77,150,64);">$LORE</span> Merchandise<br>
+                                • Introducing NFT Collections & Staking<br>
+                                • Roadmap V2: Path to Success</p>
+
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <a href="https://www.pump.fun/3dXJ85P2aGGjfUbGjuZAbkyQsbB7GDsT6vd7MccGZEiM"
+                            style="padding:2%;justify-content: center;align-items: center;width: 100%;"><button
+                                class="buy-btn hidden" style="width: 100%;">BUY $LORE</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider hidden" style="z-index: -1; box-shadow: none;  opacity: 1;">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="images/logo2.png" height="50" width="100" alt="" />
+                </div>
+            </div>
+        </div>
+        <footer class="hidden">
+            <h1 style="display: flex;" class="hidden">PEPE <span style="color: rgb(77,150,64);">$LORE</span></h1>
+            <div class="socials" class="hidden">
+                <ul>
+                    
+                    <li>
+                        <a href="https://twitter.com/pepeloremad"><i class="fa-brands fa-twitter"
+                                style="color: #ffffff;"></i></a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://t.me/pepeloremad"><i class="fa-brands fa-telegram"
+                                style="color: #ffffff;"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-chart-line" style="color: #ffffff;"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-regular fa-file-lines" style="color: #ffffff;"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+
+
+
+
+
+<script>
+    // Script de Navegação para Dispositivos Móveis
+    if (window.innerWidth < 430) {
+        // Função para lidar com o clique nos links de navegação
+        function handleLinkClick(event, linkId) {
+            const navItems = document.querySelectorAll('.nav .list');
+            navItems.forEach(item => item.classList.remove('active'));
+
+            const listItem = document.querySelector(`.${linkId}-nav.list`);
+            if (listItem) {
+                listItem.classList.add('active');
+            }
+
+            scrollToSection(`#${linkId}`);
+        }
+
+        // Função para rolar para uma seção específica
+        function scrollToSection(sectionId) {
+            const targetElement = document.querySelector(sectionId);
+            if (targetElement) {
+                const offset = document.querySelector('.nav').offsetHeight;
+                const targetPosition = targetElement.offsetTop - offset;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Eventos de Clique nos Links de Navegação
+        document.querySelectorAll('.nav .list a').forEach(link => {
+            link.addEventListener('click', function (event) {
+                const linkId = this.classList.contains('home-link') ? 'home' :
+                               this.classList.contains('features-link') ? 'features' :
+                               this.classList.contains('tokenomics-link') ? 'tokenomics' :
+                               this.classList.contains('roadmap-link') ? 'roadmap' : '';
+                handleLinkClick(event, linkId);
+            });
+        });
+
+        // Atualizar Classe Ativa ao Rolagem
+        function updateActiveClass() {
+            const sections = ['home', 'features', 'tokenomics', 'roadmap'];
+            let current = 'home';
+
+            sections.forEach(section => {
+                const element = document.querySelector(`#${section}`);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                        current = section;
+                    }
+                }
+            });
+
+            document.querySelectorAll('.nav .list').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            const activeItem = document.querySelector(`.${current}-nav.list`);
+            if (activeItem) {
+                activeItem.classList.add('active');
+            }
+        }
+
+        window.addEventListener('scroll', debounce(updateActiveClass, 100));
+        window.addEventListener('resize', updateActiveClass);
+
+        // Função Debounce para Melhor Performance
+        function debounce(func, wait) {
+            let timeout;
+            return function (...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+        }
+
+        // Definir 'home' como ativo por padrão
+        document.querySelector('.home-nav.list').classList.add('active');
+
+        // Manipulação do Botão "Enter" na Splash Screen
+        document.getElementById('enter-btn-phone').addEventListener('click', function () {
+            const splash = document.querySelector('.splash');
+            if (splash) {
+                splash.classList.add('display-none');
+            }
+        });
+    } else {
+        // Script para Desktop
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+    }
+
+    // Observador de Interseção para Elementos Ocultos
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    // Seleção de Botões de Som e Elementos de Áudio
+    const playButtons = document.querySelectorAll('.play-button');
+    const audios = document.querySelectorAll('.my-audio');
+
+    playButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            const audio = audios[index];
+
+            if (audio.paused) {
+                audio.play();
+                // Altera o ícone para "Pausar"
+                button.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                        <style>
+                            svg { fill: #ffffff; }
+                        </style>
+                        <path d="...caminho do ícone de pausa..."/>
+                    </svg>
+                `;
+            } else {
+                audio.pause();
+                // Altera o ícone para "Reproduzir"
+                button.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                        <style>
+                            svg { fill: #ffffff; }
+                        </style>
+                        <path d="...caminho do ícone de reproduzir..."/>
+                    </svg>
+                `;
+            }
+        });
+    });
+</script>
+
+</html>
