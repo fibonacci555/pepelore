@@ -19,40 +19,7 @@
 </head>
 
 <body>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load("current", { packages: ["corechart"] });
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Usage');
-            data.addColumn('number', 'Trillions');
-            data.addRows([
-                ['Liquidity Pool', { v: 4250, f: '4,250 T' }],
-                ['CEX Listing', { v: 450, f: '450 T' }],
-                ['Marketing', { v: 150, f: '150 T' }],
-                ['Team', { v: 150, f: '150 T' }],
-            ]);
-
-
-            var options = {
-
-                is3D: true,
-                backgroundColor: "transparent",
-                legend: { position: 'top', textStyle: { color: 'blue', fontSize: 16 } },
-                fontSize: 15,
-                legend: { position: 'none' },
-                chartArea: { width: '100%' },
-                colors: ['rgb(10, 94, 33)', 'rgb(7, 148, 45)', 'rgb(9, 237, 72)', 'rgb(90, 255, 111)'],
-                pieSliceText: 'percentage',
-                pieSliceTextStyle: { fontSize: 10 },
-                tooltip: { textStyle: { fontSize: 15 }, suffix: ' T', showPercentage: true },
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-            chart.draw(data, options);
-        }
-    </script>
+    
     <div class="body-pc">
 
         <style>
